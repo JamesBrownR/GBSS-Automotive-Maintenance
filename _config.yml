@@ -1,0 +1,14 @@
+
+baseurl: "" # Leave empty for root domain
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+permalink: /:year/:month/:day/:title/
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

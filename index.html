@@ -1,1 +1,63 @@
+---
+layout: default
+title: Home
+---
 
+<section class="hero">
+    <div class="container">
+        <h1>Premium Automotive<br><span class="text-red">Maintenance & Repair</span></h1>
+        <p>Mobile Mechanic Service | Carfax Certified Reporting | 5-Star Rated</p>
+        <div class="hero-btns">
+            <a href="tel:+16892784662" class="btn">Call Now: (689) 278-4662</a>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-wrench feature-icon"></i>
+                <h3>Mobile Service</h3>
+                <p>We come to your home or office. No towing fees, no waiting rooms.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-file-contract feature-icon"></i>
+                <h3>Carfax Reporting</h3>
+                <p>We believe in transparency. All completed services are added to your vehicle's Carfax history.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tachometer-alt feature-icon"></i>
+                <h3>Performance & Care</h3>
+                <p>From simple oil changes to brake pads and diagnostics, we treat your car like our own.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section">
+    <div class="container">
+        <h2 class="section-title">What Our <span class="text-red">Clients Say</span></h2>
+        
+        <div class="review-grid">
+            {% for review in site.data.reviews %}
+            <div class="review-card">
+                <div class="stars">
+                    {% for i in (1..review.stars) %}
+                        <i class="fas fa-star"></i>
+                    {% endfor %}
+                </div>
+                <p class="review-text">"{{ review.text }}"</p>
+                <div class="review-meta">
+                    <span class="review-author">{{ review.name }}</span>
+                    <span style="float: right; font-size: 0.8rem; color: #666;">{{ review.date }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://www.google.com/maps/place/GBSS+Automotive+Maintenance/@26.126583,-80.245833,17z/data=!4m8!3m7!1s0x88d9098dfca75cdd:0x39c06371746247c4!8m2!3d26.126583!4d-80.245833!9m1!1b1!16s%2Fg%2F11y3_1_11?entry=ttu" target="_blank" class="btn">Read All Reviews on Google</a>
+        </div>
+    </div>
+</section>

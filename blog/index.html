@@ -1,1 +1,74 @@
+---
+layout: default
+title: Blog
+---
 
+<section class="hero">
+    <div class="container">
+        <h1>Automotive <span class="text-red">Knowledge</span></h1>
+        <p>Expert tips and insights to help you understand and maintain your vehicle</p>
+    </div>
+</section>
+
+<section class="features" style="padding: 80px 0;">
+    <div class="container">
+        
+        <div style="max-width: 1000px; margin: 0 auto;">
+            
+            {% if site.posts.size > 0 %}
+            <div style="display: grid; gap: 30px;">
+                {% for post in site.posts %}
+                <article style="background: var(--brand-dark-grey); border-left: 4px solid var(--brand-red); padding: 30px; border-radius: 0 8px 8px 0; transition: transform 0.2s;">
+                    
+                    <div style="color: var(--brand-silver); font-size: 0.85rem; margin-bottom: 10px;">
+                        {{ post.date | date: "%B %d, %Y" }}
+                    </div>
+                    
+                    <h2 style="font-size: 1.8rem; margin-bottom: 15px;">
+                        <a href="{{ post.url }}" style="color: var(--brand-white); transition: color 0.2s;">
+                            {{ post.title }}
+                        </a>
+                    </h2>
+                    
+                    {% if post.excerpt %}
+                    <p style="color: var(--brand-silver); line-height: 1.6; margin-bottom: 20px; font-size: 1.05rem;">
+                        {{ post.excerpt }}
+                    </p>
+                    {% endif %}
+                    
+                    <a href="{{ post.url }}" style="color: var(--brand-red); font-weight: bold; text-decoration: underline;">
+                        Read Full Article →
+                    </a>
+                    
+                </article>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div style="text-align: center; padding: 60px 20px;">
+                <p style="font-size: 1.2rem; color: var(--brand-silver);">Check back soon for automotive tips and insights!</p>
+            </div>
+            {% endif %}
+            
+        </div>
+        
+    </div>
+</section>
+
+<section class="features" style="background: var(--brand-black); padding: 60px 0;">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">Need Expert Service?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px; color: var(--brand-silver);">
+            Our mobile mechanics bring professional automotive service to your location
+        </p>
+        <a href="tel:+16892784662" class="btn" style="font-size: 1.1rem;">Call: (689) 278-4662</a>
+    </div>
+</section>
+
+<style>
+    article:hover {
+        transform: translateX(5px);
+    }
+    article h2 a:hover {
+        color: var(--brand-red);
+    }
+</style>

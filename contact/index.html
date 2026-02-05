@@ -1,1 +1,253 @@
-need a example formspree form here at first sample code and faq. also need faq on home page and main services page
+---
+layout: default
+title: Contact Us
+---
+
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Get in <span class="text-red">Touch</span></h1>
+        <p>Request a quote or schedule your mobile service appointment</p>
+    </div>
+</section>
+
+<section class="features" style="padding: 80px 0;">
+    <div class="container">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 80px;">
+                
+                <!-- Contact Form -->
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 30px;">Send Us a Message</h2>
+                    
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: grid; gap: 20px;">
+                        
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 8px; font-weight: bold;">Your Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   style="width: 100%; padding: 12px; background: var(--brand-dark-grey); border: 1px solid #333; border-radius: 4px; color: var(--brand-white); font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 8px; font-weight: bold;">Email Address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   style="width: 100%; padding: 12px; background: var(--brand-dark-grey); border: 1px solid #333; border-radius: 4px; color: var(--brand-white); font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 8px; font-weight: bold;">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   style="width: 100%; padding: 12px; background: var(--brand-dark-grey); border: 1px solid #333; border-radius: 4px; color: var(--brand-white); font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="vehicle" style="display: block; margin-bottom: 8px; font-weight: bold;">Vehicle (Year, Make, Model)</label>
+                            <input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2020 Honda Accord" 
+                                   style="width: 100%; padding: 12px; background: var(--brand-dark-grey); border: 1px solid #333; border-radius: 4px; color: var(--brand-white); font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="service" style="display: block; margin-bottom: 8px; font-weight: bold;">Service Needed</label>
+                            <select id="service" name="service" 
+                                    style="width: 100%; padding: 12px; background: var(--brand-dark-grey); border: 1px solid #333; border-radius: 4px; color: var(--brand-white); font-size: 1rem;">
+                                <option value="">Select a service...</option>
+                                <option value="oil-change">Oil Change</option>
+                                <option value="diagnostics">Diagnostics</option>
+                                <option value="brake-service">Brake Service</option>
+                                <option value="ac-repair">AC Repair</option>
+                                <option value="engine-repair">Engine Repair</option>
+                                <option value="tire-rotation">Tire Rotation</option>
+                                <option value="serpentine-belt">Serpentine Belt</option>
+                                <option value="shock-absorber">Shock Absorber</option>
+                                <option value="thermostat">Thermostat</option>
+                                <option value="tie-rod-end">Tie Rod End</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" style="display: block; margin-bottom: 8px; font-weight: bold;">Message *</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      style="width: 100%; padding: 12px; background: var(--brand-dark-grey); border: 1px solid #333; border-radius: 4px; color: var(--brand-white); font-size: 1rem; resize: vertical;" 
+                                      placeholder="Tell us about your vehicle's symptoms or what service you need..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; padding: 15px;">
+                            Send Message
+                        </button>
+                        
+                        <p style="font-size: 0.85rem; color: var(--brand-silver);">
+                            * Required fields. We'll respond within 24 hours.
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 30px;">Contact Information</h2>
+                    
+                    <div style="display: grid; gap: 30px;">
+                        
+                        <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                            <div style="display: flex; gap: 15px; align-items: start;">
+                                <i class="fas fa-phone-alt" style="color: var(--brand-red); font-size: 1.5rem; margin-top: 3px;"></i>
+                                <div>
+                                    <h3 style="margin-bottom: 8px;">Call or Text</h3>
+                                    <p style="color: var(--brand-silver); margin-bottom: 10px;">Fastest way to schedule service</p>
+                                    <a href="tel:+16892784662" style="color: var(--brand-red); font-size: 1.2rem; font-weight: bold;">(689) 278-4662</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                            <div style="display: flex; gap: 15px; align-items: start;">
+                                <i class="fas fa-clock" style="color: var(--brand-red); font-size: 1.5rem; margin-top: 3px;"></i>
+                                <div>
+                                    <h3 style="margin-bottom: 8px;">Business Hours</h3>
+                                    <p style="color: var(--brand-silver); margin-bottom: 5px;"><strong>Mon - Fri:</strong> 10:00 AM – 10:00 PM</p>
+                                    <p style="color: var(--brand-silver); margin-bottom: 5px;"><strong>Saturday:</strong> 09:00 AM – 10:00 PM</p>
+                                    <p style="color: var(--brand-silver);"><strong>Sunday:</strong> 09:00 AM – 04:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                            <div style="display: flex; gap: 15px; align-items: start;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--brand-red); font-size: 1.5rem; margin-top: 3px;"></i>
+                                <div>
+                                    <h3 style="margin-bottom: 8px;">Service Area</h3>
+                                    <p style="color: var(--brand-silver);">We provide mobile service throughout South Florida, including Broward and Palm Beach counties.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                            <div style="display: flex; gap: 15px; align-items: start;">
+                                <i class="fab fa-instagram" style="color: var(--brand-red); font-size: 1.5rem; margin-top: 3px;"></i>
+                                <div>
+                                    <h3 style="margin-bottom: 8px;">Follow Us</h3>
+                                    <p style="color: var(--brand-silver); margin-bottom: 10px;">Stay updated with tips and news</p>
+                                    <div style="display: flex; gap: 15px; font-size: 1.3rem;">
+                                        <a href="https://www.instagram.com/gbss_automotive_maintenance/" target="_blank" style="color: var(--brand-red);"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.facebook.com/p/GBSS-Automotive-Maintenance-61575732120346/" target="_blank" style="color: var(--brand-red);"><i class="fab fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features" style="background: var(--brand-black); padding: 80px 0;">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">
+            Frequently Asked <span class="text-red">Questions</span>
+        </h2>
+        
+        <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 25px;">
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">What areas do you service?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    We provide mobile automotive service throughout South Florida, including all of Broward County (Fort Lauderdale, Plantation, Pembroke Pines, Hollywood, Coral Springs, Pompano Beach) and Palm Beach County (West Palm Beach, Boca Raton, Delray Beach, Boynton Beach). Call us to confirm we service your specific location.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">How does mobile service work?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    Simply call or text us with your vehicle's needs and location. We'll schedule an appointment at a time that works for you. Our fully equipped mobile service van arrives at your home, office, or wherever your vehicle is located. We perform the service on-site, so you don't waste time driving to a shop or waiting in a lobby.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Is mobile service more expensive than a shop?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    Our rates are competitive with traditional repair shops. While there may be a small trip charge for some locations, you save time, avoid towing fees, and don't lose productivity sitting in a waiting room. Most customers find mobile service to be excellent value considering the convenience and time saved.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Do you work on all vehicle makes and models?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    Yes, we service most domestic, European, and Asian vehicles. Whether you drive a Honda, Toyota, Ford, Chevrolet, BMW, Mercedes-Benz, or any other make, we have the expertise and tools to maintain and repair it properly. If you have an unusual or exotic vehicle, call us to confirm we can service it.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">What services can be done mobile vs. at a shop?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    Most common maintenance and repair services can be performed on-site: oil changes, brake service, battery replacement, starter/alternator replacement, diagnostics, serpentine belts, thermostats, tie rod ends, shock absorbers, spark plugs, and more. Services requiring specialized equipment like wheel alignments, tire mounting, or major transmission work may need to be done at a shop. We'll let you know upfront if a service requires shop equipment.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Do you provide parts or do I need to buy them?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    We provide all necessary parts and fluids for the service. We use quality OEM or premium aftermarket parts matched to your vehicle's specifications. If you prefer to supply your own parts, let us know in advance and we can discuss options.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Are your services documented?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    Absolutely. All completed services are professionally documented and added to your vehicle's Carfax history. This maintains your vehicle's resale value, provides proof of maintenance, and gives you a clear service record. We run our mobile business with the same professionalism as any established shop.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">What payment methods do you accept?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    We accept cash, all major credit cards, and digital payment methods. Payment is due upon completion of service. We'll provide you with a detailed invoice showing all work performed and parts used.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">How quickly can you come out?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    In many cases, we can provide same-day or next-day service. For urgent issues like a vehicle that won't start or is overheating, we'll do our best to come out as quickly as possible. For routine maintenance, we can usually accommodate your preferred schedule within a few days.
+                </p>
+            </div>
+            
+            <div style="background: var(--brand-dark-grey); padding: 25px; border-left: 4px solid var(--brand-red); border-radius: 0 8px 8px 0;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Do you offer any warranties?</h3>
+                <p style="color: var(--brand-silver); line-height: 1.6;">
+                    Yes, we stand behind our work. Most services come with a parts and labor warranty. Warranty terms vary by service and parts used—we'll explain the specific warranty for your service before we begin work. If you experience any issues after service, contact us immediately and we'll make it right.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="features" style="padding: 60px 0; background: var(--brand-dark-grey);">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">Still Have Questions?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px; color: var(--brand-silver);">
+            Call us today – we're happy to discuss your vehicle's needs
+        </p>
+        <a href="tel:+16892784662" class="btn" style="font-size: 1.2rem; padding: 18px 40px;">Call Now: (689) 278-4662</a>
+    </div>
+</section>
+
+<style>
+    /* Form input focus styles */
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+        border-color: var(--brand-red);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        section .container > div[style*="grid-template-columns: 1fr 1fr"] {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>

@@ -16,16 +16,42 @@
         <div class="container nav-flex">
             <div class="logo">
                 <a href="/">
-                    <img src="Logo.png" alt="GBSS Automotive Logo" class="logo-img">
+                    <img src="/Logo.png" alt="GBSS Automotive Logo" class="logo-img">
                     <span style="font-family:'Russo One'; margin-left: 10px; font-size: 1.2rem;">GBSS AUTO</span>
                 </a>
             </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
             <div class="contact-cta">
                 <a href="tel:+16892784662" class="nav-phone">
                     <i class="fas fa-phone-alt"></i> (689) 278-4662
                 </a>
             </div>
         </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -58,8 +84,7 @@
                 <div class="footer-map">
                     <h3>Service Area</h3>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1021393.4900078462!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xab1a1791ea623819%3A0xb6df514a75de0e30!2sGBSS%20Automotive%20Maintenance!5e0!3m2!1sen!2sus!4v1770247370971!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d897206.132075043!2d-82.67438875464359!3d28.54839149351637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xab1a1791ea623819%3A0xb6df514a75de0e30!2sGBSS%20Automotive%20Maintenance!5e0!3m2!1sen!2sus!4v1770328724122!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                 </div>
 
             </div>
@@ -68,6 +93,34 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            if (menuToggle && mobileNav) {
+                menuToggle.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+                
+                // Close menu when clicking a link
+                const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileNav.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-times');
+                    });
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>

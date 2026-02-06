@@ -25,7 +25,7 @@ title: Blog
                     </div>
                     
                     <h2 style="font-size: 1.8rem; margin-bottom: 15px;">
-                        <a href="{{ post.url }}" style="color: var(--brand-white); transition: color 0.2s;">
+                        <a href="{{ site.baseurl }}/{{ post.url }}" style="color: var(--brand-white); transition: color 0.2s;">
                             {{ post.title }}
                         </a>
                     </h2>
@@ -36,7 +36,7 @@ title: Blog
                     </p>
                     {% endif %}
                     
-                    <a href="{{ post.url }}" style="color: var(--brand-red); font-weight: bold; text-decoration: underline;">
+                    <a href="{{ site.baseurl }}/{{ post.url }}" style="color: var(--brand-red); font-weight: bold; text-decoration: underline;">
                         Read Full Article →
                     </a>
                     
